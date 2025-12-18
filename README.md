@@ -177,4 +177,52 @@ Public certificates are meant to be shared.
 
 ---
 
+## ▶️ HOW TO USE
+
+### 1️⃣ Save your certificate
+
+```bash
+nano cert.pem
+# paste certificate
+```
+
+### 2️⃣ Save the script
+
+```bash
+nano read_cert.sh
+chmod +x read_cert.sh
+```
+
+### 3️⃣ Run it
+
+```bash
+./read_cert.sh cert.pem
+```
+
+---
+
+## 🧠 WHAT THIS SCRIPT TELLS YOU (SECURITY VIEW)
+
+✔ Who owns the certificate
+✔ Which CA issued it
+✔ Expiry / validity window
+✔ All valid domains (SAN)
+✔ Crypto strength (ECC / RSA)
+✔ Whether it’s server-auth only
+✔ Full decoded X.509 structure
+
+---
+
+## 🐞 BUG BOUNTY USE CASES
+
+You can use this script to find:
+
+* ❌ Expired certificates
+* ❌ Wrong domain coverage
+* ❌ Weak algorithms
+* ❌ Misused certs
+* ❌ TLS trust issues
+
+---
+
 
